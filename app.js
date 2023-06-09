@@ -18,7 +18,13 @@ let get_quote = async() => {
         author.innerHTML = data[0].author
         category.innerHTML = data[0].category
     }).catch(err => console.log(err));
-
-
 }
+window.addEventListener("load", (event) => {
+    setTimeout(() => {
+        quote.innerHTML = "Welcome to Quotes App" + "<br>" + "created by Anupam" + "💖"
+        quote.style.fontSize = "30px"
+
+    }, 1000)
+
+});
 btn.addEventListener('click', get_quote);
